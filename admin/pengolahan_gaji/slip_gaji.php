@@ -145,7 +145,13 @@
                 <td><?php echo $kolom['bulan']." ".$kolom['tahun']?></td>
                 <td><?php echo $kolom['nip']?></td>
                 <td><?php echo $kolom['nama']?></td>
-                <td><?php echo $kolom['tgl_masuk']?></td>
+                <td>
+                    <?php
+                        $tgl_masuk1 = explode("-", $kolom['tgl_masuk']);
+                        $tgl_masuk = $tgl_masuk1[2]."-".$tgl_masuk1[1]."-".$tgl_masuk1[0];
+                        echo $tgl_masuk;
+                    ?>
+                </td>
                 <td><?php echo $kolom['npwp']?></td>
                 <td><?php echo $kolom['nama_jabatan']?></td>
                 <td><?php echo $kolom['pay_mode']?></td>

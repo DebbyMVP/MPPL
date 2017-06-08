@@ -69,13 +69,13 @@ $tahun = $hasil ['tahun'];
                   <b>Status</b> <a class="pull-right"><?php echo $status ?></a>
                 </li>
                 <li class="list-group-item">
-                  <b>Gaji Pokok</b> <a class="pull-right"><?php echo $gaji_pokok ?></a>
+                  <b>Gaji Pokok</b> <a class="pull-right">Rp <?php echo number_format($gaji_pokok,"2",",",".") ?></a>
                 </li>
                 <li class="list-group-item">
-                  <b>Lembur</b> <a class="pull-right"><?php echo $lembur ?></a>
+                  <b>Lembur</b> <a class="pull-right">Rp <?php echo number_format($lembur,"2",",",".") ?></a>
                 </li>
               	<li class="list-group-item">
-                  <b>PengHasilan Setahun</b> <a class="pull-right"><?php echo $peng_tahun ?></a>
+                  <b>PengHasilan Setahun</b> <a class="pull-right">Rp <?php echo number_format($peng_tahun,"2",",",".") ?></a>
                 </li>
               </ul>
             </div>
@@ -96,19 +96,19 @@ $tahun = $hasil ['tahun'];
               <h7 class="profile-username text-left">Pengurang</h7>
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                  <b>Biaya Jabatan</b> <a class="pull-right"><?php echo $biaya_jab ?></a>
+                  <b>Biaya Jabatan</b> <a class="pull-right">Rp <?php echo number_format($biaya_jab,"2",",",".") ?></a>
                 </li>
                 <li class="list-group-item">
-                  <b>BPJS Kes</b> <a class="pull-right"><?php echo $bpjs_kes ?></a>
+                  <b>BPJS Kes</b> <a class="pull-right">Rp <?php echo number_format($bpjs_kes,"2",",",".") ?></a>
                 </li>
                 <li class="list-group-item">
-                  <b>BPJS Ket</b> <a class="pull-right"><?php echo $bpjs_ket ?></a>
+                  <b>BPJS Ket</b> <a class="pull-right">Rp <?php echo number_format($bpjs_ket,"2",",",".") ?></a>
                 </li>
                 <li class="list-group-item">
-                  <b>Telat /  Alpa</b> <a class="pull-right"><?php echo $telat_alpa ?></a>
+                  <b>Telat /  Alpa</b> <a class="pull-right">Rp <?php echo number_format($telat_alpa,"2",",",".") ?></a>
                 </li>
                 <li class="list-group-item">
-                  <b>PTKP</b> <a class="pull-right"><?php echo $ptkp ?></a>
+                  <b>PTKP</b> <a class="pull-right">Rp <?php echo number_format($ptkp,"2",",",".") ?></a>
                 </li>
               </ul>
             </div>
@@ -123,16 +123,16 @@ $tahun = $hasil ['tahun'];
             <div class="box-body box-profile">
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                  <b>Total Pengurang</b> <a class="pull-right"><?php echo $total_pengu ?></a>
+                  <b>Total Pengurang</b> <a class="pull-right">Rp <?php echo number_format($total_pengu,"2",",",".") ?></a>
                 </li>
                 <li class="list-group-item">
-                  <b>Penghasilan Kena Pajak</b> <a class="pull-right"><?php echo $peng_kena_pajak ?></a>
+                  <b>Penghasilan Kena Pajak</b> <a class="pull-right">Rp <?php echo number_format($peng_kena_pajak,"2",",",".") ?></a>
                 </li>
                 <li class="list-group-item">
-                  <b>PPH Terhutang Setahun</b> <a class="pull-right"><?php echo $pph_terhutang_set ?></a>
+                  <b>PPH Terhutang Setahun</b> <a class="pull-right">Rp <?php echo number_format($pph_terhutang_set,"2",",",".") ?></a>
                 </li>
                 <li class="list-group-item">
-                  <b>PPH Terhutang Perbulan</b> <a class="pull-right"><?php echo $pph_terhutang_seb ?></a>
+                  <b>PPH Terhutang Perbulan</b> <a class="pull-right">Rp <?php echo number_format(floor($pph_terhutang_seb),"2",",",".") ?></a>
                 </li>
               </ul>
             </div>

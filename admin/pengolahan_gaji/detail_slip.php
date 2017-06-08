@@ -24,7 +24,8 @@ $pay_mode = $hasil['pay_mode'];
 $nama = $hasil ['nama'];
 $nama_jabatan = $hasil['nama_jabatan'];
 $nip = $hasil ['nip'];
-$tgl_masuk = $hasil ['tgl_masuk'];
+$tgl_masuk1 = explode("-", $hasil ['tgl_masuk']);
+$tgl_masuk = $tgl_masuk1[2]."-".$tgl_masuk1[1]."-".$tgl_masuk1[0];
 $nama_bank = $hasil ['nama_bank'];
 $npwp = $hasil ['npwp'];
 $no_rek = $hasil ['no_rek'];
@@ -60,7 +61,7 @@ $tahun = $hasil ['tahun'];
                        </style>
                        
                        <table class="table table-bordered" >
-                       <td><img src='../gambar/logo.jpg'></td>
+                       <td><img src='../gambar/dgt.png' width="200" height="100" class="img-responsive"></td>
                        
                        <td>PAY SLIP for</td>
                        <td><input type="text" class="form-control" id="contract-name" name="bulan" size="1px"  readonly value="<?php echo "$bulan"; ?>"></td>
@@ -121,13 +122,13 @@ $tahun = $hasil ['tahun'];
                                     BASIC SALARY
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($gaji_pokok,"2",",","."); ?>
+                                    Rp <?php echo number_format($gaji_pokok,"2",",","."); ?>
                                 </td>
                                 <td width="25%">
                                     TAX PPH 21
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($pph_terhutang_seb,"2",",","."); ?>
+                                    Rp <?php echo number_format($pph_terhutang_seb,"2",",","."); ?>
                                 </td>
                             </tr>
                             <tr>
@@ -135,13 +136,13 @@ $tahun = $hasil ['tahun'];
                                     PENSION ALLOWANCE (JHT)*
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($jht,"2",",","."); ?>
+                                    Rp <?php echo number_format($jht,"2",",","."); ?>
                                 </td>
                                 <td width="25%">
                                     ADDITIONAL PAYMENT FOR JPK
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($add_pay_jpk,"2",",","."); ?>
+                                    Rp <?php echo number_format($add_pay_jpk,"2",",","."); ?>
                                 </td>
                             </tr>
                             <tr>
@@ -149,13 +150,13 @@ $tahun = $hasil ['tahun'];
                                     MEDICAL ALLOWANCE (JPK)*        
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($jpk,"2",",","."); ?>
+                                    Rp <?php echo number_format($jpk,"2",",","."); ?>
                                 </td>
                                 <td width="25%">
                                     ADDITIONAL PAYMENT FOR JHT
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($add_pay_jht,"2",",","."); ?>
+                                    Rp <?php echo number_format($add_pay_jht,"2",",","."); ?>
                                 </td>
                             </tr>
                             <tr>
@@ -163,13 +164,13 @@ $tahun = $hasil ['tahun'];
                                     WORK SAFETY ALLOWANCE (JKK)*   
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($jkk,"2",",","."); ?>
+                                    Rp <?php echo number_format($jkk,"2",",","."); ?>
                                 </td>
                                 <td width="25%">
                                     ADDITIONAL PAYMENT FOR JP
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($add_pay_jp,"2",",","."); ?>
+                                    Rp <?php echo number_format($add_pay_jp,"2",",","."); ?>
                                 </td>
                             </tr>
                             <tr>
@@ -177,7 +178,7 @@ $tahun = $hasil ['tahun'];
                                     DEATH ALLOWANCE (JKM)*    
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($jkm,"2",",","."); ?>
+                                    Rp <?php echo number_format($jkm,"2",",","."); ?>
                                 </td>
                                 <td width="25%">
                                     
@@ -191,7 +192,7 @@ $tahun = $hasil ['tahun'];
                                     PENSION ALLOWANCE (JP)*  
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($jp,"2",",","."); ?>
+                                    Rp <?php echo number_format($jp,"2",",","."); ?>
                                 </td>
                                 <td width="25%">
                                     
@@ -205,7 +206,7 @@ $tahun = $hasil ['tahun'];
                                     OVERTIME  
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($overtime,"2",",","."); ?>
+                                    Rp <?php echo number_format($overtime,"2",",","."); ?>
                                 </td>
                                 <td width="25%">
                                     
@@ -219,7 +220,7 @@ $tahun = $hasil ['tahun'];
                                     BONUS   
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($bonus,"2",",","."); ?>
+                                    Rp <?php echo number_format($bonus,"2",",","."); ?>
                                 </td>
                                 <td width="25%">
                                     
@@ -248,13 +249,13 @@ $tahun = $hasil ['tahun'];
                                     Total Earning   
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($total_ear,"2",",","."); ?>
+                                    Rp <?php echo number_format($total_ear,"2",",","."); ?>
                                 </td>
                                 <td width="25%">
                                     Total Deduction
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($total_dedu,"2",",","."); ?>
+                                    Rp <?php echo number_format($total_dedu,"2",",","."); ?>
                                 </td>
                             </tr>
                             </table>
@@ -265,7 +266,7 @@ $tahun = $hasil ['tahun'];
                                     Net Pay   
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($net_pay,"2",",","."); ?>
+                                    Rp <?php echo number_format($net_pay,"2",",","."); ?>
                                 </td>
                             </tr>
                             <tr>
@@ -273,7 +274,7 @@ $tahun = $hasil ['tahun'];
                                     Take Home Pay   
                                 </td>
                                 <td width="25%" align="right">
-                                    <?php echo number_format($take_home_pay,"2",",","."); ?>
+                                    Rp <?php echo number_format($take_home_pay,"2",",","."); ?>
                                 </td>
                             </tr>
                             </table>

@@ -45,8 +45,21 @@
                    <td><?php echo $kolom['nip']?></td>
                     <td><?php echo $kolom['nama']?></td>
                     <td><?php echo $kolom['s_kerja']?></td>
-                    <td><?php echo $kolom['tgl_masuk']?></td>
-                    <td><?php echo $kolom['tgl_berakhir']?></td>
+                    <td>
+                        <?php
+                            $tgl_masuk1 = explode("-",$kolom['tgl_masuk']);
+                            $tgl_masuk = $tgl_masuk1[2]."-".$tgl_masuk1[1]."-".$tgl_masuk1[0];
+                            echo $tgl_masuk;
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                            $tgl_berakhir1 = explode("-", $kolom['tgl_berakhir']);
+                            $tgl_berakhir = $tgl_berakhir1[2]."-".$tgl_berakhir1[1]."-".$tgl_berakhir1[0];
+                            echo $tgl_berakhir;
+
+                        ?>    
+                    </td>
                     <td>
                     <?php 
                         $foto = $kolom['foto'];

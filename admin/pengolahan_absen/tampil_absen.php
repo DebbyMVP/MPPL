@@ -124,7 +124,13 @@
             ?>
             <tr>
                 <td><?php echo $kolom['kd_absen']?></td>
-                <td><?php echo $kolom['tanggal']?></td>
+                <td>
+                  <?php
+                      $tgl1 = explode("-", $kolom['tanggal']);
+                      $tgl = $tgl1[2]."-".$tgl1[1]."-".$tgl1[0];
+                      echo $tgl;
+                  ?>      
+                </td>
                 <td><?php echo $kolom['nip']?></td>
                 <td><?php echo $kolom['nama']?></td>
                 <td><?php echo $kolom['nama_jabatan']?></td>

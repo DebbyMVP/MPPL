@@ -51,7 +51,7 @@ $take_home_pay = $hasil ['take_home_pay'];
 $bulan = $hasil ['bulan'];
 $tahun = $hasil ['tahun'];
 
-$logo = "../../gambar/logo.jpg";
+$logo = "../../gambar/dgt.png";
 // session_start();
 // $nf = $_SESSION['nf'];
 
@@ -59,6 +59,7 @@ $pdf = new FPDF();
 $pdf->AddPage('P','A4');
 $pdf->SetFont('Arial','B',16);
 $pdf->Cell(52,17,$pdf -> Image($logo,$pdf-> GetX(),$pdf-> GetY(), 50.78),'0','0','L',false);
+$pdf->Ln(10);
 $pdf->SetFont('Arial','b',9);
 $pdf->Ln(11);
 $pdf->Cell(52,10,'',0,0,'L');

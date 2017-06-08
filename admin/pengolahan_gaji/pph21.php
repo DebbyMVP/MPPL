@@ -113,7 +113,7 @@
                 <th>NIP</th>
                 <th>Nama</th>
                 <th>Status</th>
-                <th>Gaji Poko</th>
+                <th>Gaji Pokok</th>
                 <!-- <th>Lembur</th> -->
                 <th>Penghasilan Setahun</th>
                 <th>Total Pengurang</th>
@@ -136,10 +136,10 @@
                 <td><?php echo $kolom['nip']?></td>
                 <td><?php echo $kolom['nama']?></td>
                 <td><?php echo $kolom['status']?></td>
-                <td><?php echo number_format($kolom['gaji_pokok'],2,',','.');?></td>
-                <td><?php echo number_format($kolom['peng_tahun'],2,',','.');?></td>
-                <td><?php echo number_format($kolom['total_pengu'],2,',','.');?></td>
-                <td><?php echo number_format($kolom['peng_kena_pajak'],2,',','.');?></td>
+                <td>Rp <?php echo number_format($kolom['gaji_pokok'],2,',','.');?></td>
+                <td>Rp <?php echo number_format($kolom['peng_tahun'],2,',','.');?></td>
+                <td>Rp <?php echo number_format($kolom['total_pengu'],2,',','.');?></td>
+                <td>Rp <?php echo number_format($kolom['peng_kena_pajak'],2,',','.');?></td>
                 <td>
                      <a href="media.php?page=detail_pph21&id_gaji=<?php echo $kolom['id_gaji']; ?>"><button type="button" class="btn btn-success"><span  class="fa fa-external-link"aria-hidden="true"> Detail </span></button></a>
                 </td>
